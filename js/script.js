@@ -1,6 +1,6 @@
 import slides from "./function/slides.js";
 import burger from "./function/burger.js";
-
+import themedDark from "./function/theme.js";
 const { forward, backward } = slides; 
 
 // Boutons "Next"
@@ -14,3 +14,4 @@ document.querySelector("#compare #goma #left").addEventListener("click", backwar
 document.querySelector("#compare #kinois #left").addEventListener("click", backward);
 
 burger();
+themedDark();
