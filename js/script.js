@@ -1,4 +1,5 @@
 import slides from "./function/slides.js";
+import burger from "./function/burger.js";
 
 const { forward, backward } = slides; 
 
@@ -12,3 +13,4 @@ document.querySelector("#hero #left").addEventListener("click", backward);
 document.querySelector("#compare #goma #left").addEventListener("click", backward);
 document.querySelector("#compare #kinois #left").addEventListener("click", backward);
 
+burger();

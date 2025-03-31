@@ -45,6 +45,7 @@ body header nav #headList .open {
   bottom: 0;
   right: 20%;
   background-color: rgba(10, 9, 9, 0.568);
+  z-index: 100;
 }
 body header nav #headList .open li {
   margin: 3rem;
@@ -57,8 +58,8 @@ body header nav #headList .open li a {
 body header nav #headList .open #close {
   fill: white;
   position: inherit;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
 }
 body header nav #headList #burger {
   stroke: black;

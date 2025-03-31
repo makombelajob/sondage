@@ -48,6 +48,7 @@ body{
                     bottom: 0;
                     right: 20%;
                     background-color: rgba(10, 9, 9, 0.568);
+                    z-index: 100;
                     li{
                         margin: 3rem;
                         a{
@@ -59,8 +60,8 @@ body{
                     #close{
                         fill: $text-white;
                         position: inherit;
-                        top: 0;
-                        left: 0;
+                        top: 2px;
+                        left: 2px;
                     }
                 }
                 #burger{
