@@ -6,6 +6,8 @@ export default function theme(){
     themeSwitch.addEventListener("click", function () {
         currentTheme = (currentTheme === "light") ? "dark" : "light";
         localStorage.theme = currentTheme;
+        applyTheme()
+
     });
 
     function applyTheme() {
