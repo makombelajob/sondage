@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" type="module"></script>
+    <script src="js/function/sondage.js" defer></script>
     <title>Sondage RDCongo</title>
 </head>
 <body>
@@ -44,9 +45,9 @@
     </header>
     <main>
         <section id="sondage">
-            <form action="">
+            <form action="" data-netlify="true">
                 <div class="question">
-                    <label for="answer">Pensez-vous que <strong>TSHISEKEDI</strong> est complice de <strong>KAGAME</strong>?</label>
+                    <label>Pensez-vous que <strong>TSHISEKEDI</strong> est complice de <strong>KAGAME</strong>?</label>
                 </div>
                 <div class="btnSubmit">
                     <button id="yes" type="submit" disabled>OUI</button>
@@ -58,7 +59,7 @@
     <template id="templateForm">
         <form action="">
             <div class="">
-                <label for=""> <strong></strong><strong></strong>?</label>
+                <label> <strong></strong><strong></strong>?</label>
             </div>
             <div class="">
                 <button id="" type="" disabled></button>
