@@ -1,0 +1,252 @@
+$text-black: black;
+$text-white: white;
+$main-color: green;
+$second-color: yellow;
+:root{
+    font-size: 12px;
+    --text-black: #{$text-black};
+    --main-color: #{$main-color};
+    --second-color: #{$second-color};
+    --text-white: #{$text-white};
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin-inline: 1rem;
+    header{
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 1px 1px lightgreen;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            a{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 1px dashed $text-black;
+                }
+            }
+            h2{
+                font-size: 1.3rem;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            #headList{
+                .open{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 20%;
+                    background-color: rgba(10, 9, 9, 0.568);
+                    z-index: 100;
+                    li{
+                        margin: 3rem;
+                        a{
+                            color: $text-white;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    #close{
+                        fill: $text-white;
+                        position: inherit;
+                        top: 2px;
+                        left: 2px;
+                    }
+                }
+                #burger{
+                    stroke: $text-black;
+                    cursor: pointer;
+                }
+                #theme-switch{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    main{
+        #hero,
+        #compare{
+            h1{
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 700;
+                margin-block: 2rem;
+            }
+            .slides{
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+                margin-block: 1rem;
+                .elements{
+                    .element{
+                        position: relative;
+                        display: none;
+                        img{
+                            aspect-ratio: 1 / -1;
+
+                        }
+                        &.active{
+                            display: block;
+                        }
+                        figcaption{
+                            text-align: center;
+                            width: 60%; 
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: rgba(26, 24, 24, 0.801);
+                            padding: 1.2rem;
+                            font-size: 1.2rem;
+                            border-radius: 1rem;
+                            h2{
+                                text-transform: capitalize;
+                                margin-block: 1rem;
+                                color: $second-color;
+                            }
+                            p{
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+                #left,
+                #right{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+                #left{
+                    left: 0;
+                }
+                #right{
+                    right: 0;
+                }
+            }
+        }
+        #message{
+            .title{
+                text-align: center;
+                margin: 2rem;
+                h2{
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+            .param1,
+            .param2{
+                font-size: 1.6rem;
+                margin: 1rem;
+                padding-block: 1.5rem;
+                box-shadow: 1px 1px rgba(21, 201, 21, 0.397);
+                border-radius: 1rem;
+            }
+            .sondage{
+                text-align: center;
+                padding: 2rem;
+                a{
+                    text-decoration: none;
+                    color: $second-color;
+                    background-color: $text-black;
+                    cursor: pointer;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    border-radius: 1rem;
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.753);
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+    #sondage,
+    #sondage2,
+    #sondage3,
+    #sondage4,
+    #sondage5{
+        margin-top: 5rem;
+        form{
+            background-color: rgba(65, 65, 24, 0.616);
+            border-radius: 0.5rem;
+            .question{
+                text-align: center;
+                padding: 2rem;
+                label{
+                    font-size: 1.5rem;
+                    color: $text-black;
+                }
+                
+            }
+            .btnSubmit{
+                text-align: center;
+                padding-bottom: 1rem;
+                #yes, 
+                #no{
+                    border: none;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    margin-inline-start: 1rem;
+                    cursor: pointer;
+                    &#yes:hover{
+                        background-color: $main-color;
+                        color: $text-black;
+                    }
+                    &#no:hover{
+                        background-color: $second-color;
+                        color: $text-black;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        border-top: 1px solid lightgrey;
+        margin-top: 3rem;
+        .main{ 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            ul{
+                li{
+                    padding: 1rem;
+                    a{
+                        text-decoration: none;
+                        color: $main-color;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .text{
+                background-color: rgba(71, 68, 68, 0.534);
+                font-size: 1.5rem;
+                color: $second-color;
+                padding: 0.5rem;
+                border-radius: 1rem;
+            }
+        }
+        .foot{
+            padding: 1rem;
+            background-color: $main-color;
+            text-align: center;
+            margin-block: 1rem;
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+}
