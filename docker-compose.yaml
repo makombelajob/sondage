@@ -8,15 +8,15 @@ services:
         volumes:
             -   ./app:/var/www/html/
         depends_on:
-            -   mysql
+            -   database
             
-    mysql:
+    database:
         image: mysql:8.0
         environment:
             MYSQL_ROOT_PASSWORD: sondage7791
             MYSQL_DATABASE: sondageRdc
             MYSQL_USER: johnny
-            MYSQL_PASSWORD: johnny7791
+            MYSQL_PASSWORD: johnny77911
         ports:
             -   "3306:3306"
         volumes:
@@ -27,10 +27,10 @@ services:
         ports:
             -   "8081:80"
         environment:
-            PMA_HOST: mysql
+            PMA_HOST: database
             PMA_PASSWORD: sondage7791
         depends_on:
-            -   mysql
+            -   database
     
     postgresql:
         image: bitnami/postgresql

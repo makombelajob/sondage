@@ -4,7 +4,7 @@
 This project is a simple opinion poll website focused on public perception of political figures in the Democratic Republic of Congo. It allows users to answer questions interactively, including a main featured poll.
 
 ---
-![Survey Screenshot](assets/images/Screenshots.png)
+![Screenshot](app/assets/images/Screenshots.png)
 
 ## 🧩 Features
 

@@ -15,17 +15,17 @@ yesBtn.addEventListener("click", function(e){
     e.preventDefault();
     const dataAnswer = this.dataset.value;
     localStorage.setItem("answer1",dataAnswer);
-    location.href = "sondage2.html";
+    location.href = "sondage2.php";
 });
 noBtn.addEventListener("click", function(e){
     e.preventDefault();
     const dataAnswer = this.dataset.value;
     localStorage.setItem("answer1",dataAnswer);
-    location.href = "sondage2.html";
+    location.href = "sondage2.php";
 });
 
 sondageForm.addEventListener("submit", function(e){
     e.preventDefault();
-    location.href = "sondage2.html";
+    location.href = "sondage2.php";
 });
 
